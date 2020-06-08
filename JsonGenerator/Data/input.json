@@ -1,0 +1,5 @@
+﻿{
+  "uniqueId": "{{random}}",
+  "random": "{{randomRange 1.8 200.34}}{{/randomRange}}",
+  "guid": "{{guid}}"
+}

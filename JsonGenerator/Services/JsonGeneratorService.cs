@@ -20,11 +20,8 @@ namespace JsonGenerator.Services
             _setup.load();
             var template = Handlebars.Compile(source.ToString());
 
-            var data = new
-            {
-                random = _operations.GetRandomInt(),
-                guid = _operations.GetGuid()
-            };
+            var data = _operations.getData();
+
             var result = template(data);
             return JObject.Parse(result);
         }

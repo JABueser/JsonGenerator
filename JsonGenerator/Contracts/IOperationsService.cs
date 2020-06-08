@@ -4,7 +4,6 @@ namespace JsonGenerator.Contracts
 {
     public interface IOperationsService
     {
-        int GetRandomInt();
-        Guid GetGuid();
+        object getData();
     }
 }

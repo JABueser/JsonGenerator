@@ -6,12 +6,19 @@ namespace JsonGenerator.Services
 {
     public class OperationsService : IOperationsService
     {
-        public int GetRandomInt()
+        public object getData()
+        {
+            return new
+            {
+                random = GetRandomInt(),
+                guid = GetGuid()
+            };
+        }
+        protected int GetRandomInt()
         {
             return new Random().Next();
         }
-
-        public Guid GetGuid()
+        protected Guid GetGuid()
         {
             return Guid.NewGuid();
         }
